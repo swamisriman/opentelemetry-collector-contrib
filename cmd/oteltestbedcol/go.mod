@@ -19,7 +19,28 @@ require (
 	github.com/open-telemetry/opentelemetry-collector-contrib/extension/pprofextension v0.101.0
 	github.com/open-telemetry/opentelemetry-collector-contrib/extension/storage/filestorage v0.101.0
 	github.com/open-telemetry/opentelemetry-collector-contrib/processor/attributesprocessor v0.101.0
+	github.com/open-telemetry/opentelemetry-collector-contrib/processor/cumulativetodeltaprocessor v0.101.0
+	github.com/open-telemetry/opentelemetry-collector-contrib/processor/deltatocumulativeprocessor v0.101.0
+	github.com/open-telemetry/opentelemetry-collector-contrib/processor/deltatorateprocessor v0.101.0
+	github.com/open-telemetry/opentelemetry-collector-contrib/processor/filterprocessor v0.101.0
+	github.com/open-telemetry/opentelemetry-collector-contrib/processor/groupbyattrsprocessor v0.101.0
+	github.com/open-telemetry/opentelemetry-collector-contrib/processor/groupbytraceprocessor v0.101.0
+	github.com/open-telemetry/opentelemetry-collector-contrib/processor/intervalprocessor v0.101.0
+	github.com/open-telemetry/opentelemetry-collector-contrib/processor/k8sattributesprocessor v0.101.0
+	github.com/open-telemetry/opentelemetry-collector-contrib/processor/logstransformprocessor v0.101.0
+	github.com/open-telemetry/opentelemetry-collector-contrib/processor/metricsgenerationprocessor v0.101.0
+	github.com/open-telemetry/opentelemetry-collector-contrib/processor/metricstransformprocessor v0.101.0
+	github.com/open-telemetry/opentelemetry-collector-contrib/processor/probabilisticsamplerprocessor v0.101.0
+	github.com/open-telemetry/opentelemetry-collector-contrib/processor/redactionprocessor v0.101.0
+	github.com/open-telemetry/opentelemetry-collector-contrib/processor/remotetapprocessor v0.101.0
+	github.com/open-telemetry/opentelemetry-collector-contrib/processor/resourcedetectionprocessor v0.101.0
 	github.com/open-telemetry/opentelemetry-collector-contrib/processor/resourceprocessor v0.101.0
+	github.com/open-telemetry/opentelemetry-collector-contrib/processor/routingprocessor v0.101.0
+	github.com/open-telemetry/opentelemetry-collector-contrib/processor/schemaprocessor v0.101.0
+	github.com/open-telemetry/opentelemetry-collector-contrib/processor/spanprocessor v0.101.0
+	github.com/open-telemetry/opentelemetry-collector-contrib/processor/sumologicprocessor v0.101.0
+	github.com/open-telemetry/opentelemetry-collector-contrib/processor/tailsamplingprocessor v0.101.0
+	github.com/open-telemetry/opentelemetry-collector-contrib/processor/transformprocessor v0.101.0
 	github.com/open-telemetry/opentelemetry-collector-contrib/receiver/carbonreceiver v0.101.0
 	github.com/open-telemetry/opentelemetry-collector-contrib/receiver/filelogreceiver v0.101.0
 	github.com/open-telemetry/opentelemetry-collector-contrib/receiver/fluentforwardreceiver v0.101.0
@@ -377,6 +398,48 @@ replace github.com/open-telemetry/opentelemetry-collector-contrib/exporter/sapme
 replace github.com/open-telemetry/opentelemetry-collector-contrib/receiver/syslogreceiver => ../../receiver/syslogreceiver
 
 replace github.com/open-telemetry/opentelemetry-collector-contrib/processor/resourceprocessor => ../../processor/resourceprocessor
+
+replace github.com/open-telemetry/opentelemetry-collector-contrib/processor/cumulativetodeltaprocessor => ../../processor/cumulativetodeltaprocessor
+
+replace github.com/open-telemetry/opentelemetry-collector-contrib/processor/deltatocumulativeprocessor => ../../processor/deltatocumulativeprocessor
+
+replace github.com/open-telemetry/opentelemetry-collector-contrib/processor/deltatorateprocessor => ../../processor/deltatorateprocessor
+
+replace github.com/open-telemetry/opentelemetry-collector-contrib/processor/filterprocessor => ../../processor/filterprocessor
+
+replace github.com/open-telemetry/opentelemetry-collector-contrib/processor/groupbyattrsprocessor => ../../processor/groupbyattrsprocessor
+
+replace github.com/open-telemetry/opentelemetry-collector-contrib/processor/groupbytraceprocessor => ../../processor/groupbytraceprocessor
+
+replace github.com/open-telemetry/opentelemetry-collector-contrib/processor/intervalprocessor => ../../processor/intervalprocessor
+
+replace github.com/open-telemetry/opentelemetry-collector-contrib/processor/k8sattributesprocessor => ../../processor/k8sattributesprocessor
+
+replace github.com/open-telemetry/opentelemetry-collector-contrib/processor/logstransformprocessor => ../../processor/logstransformprocessor
+
+replace github.com/open-telemetry/opentelemetry-collector-contrib/processor/metricsgenerationprocessor => ../../processor/metricsgenerationprocessor
+
+replace github.com/open-telemetry/opentelemetry-collector-contrib/processor/metricstransformprocessor => ../../processor/metricstransformprocessor
+
+replace github.com/open-telemetry/opentelemetry-collector-contrib/processor/probabilisticsamplerprocessor => ../../processor/probabilisticsamplerprocessor
+
+replace github.com/open-telemetry/opentelemetry-collector-contrib/processor/redactionprocessor => ../../processor/redactionprocessor
+
+replace github.com/open-telemetry/opentelemetry-collector-contrib/processor/remotetapprocessor => ../../processor/remotetapprocessor
+
+replace github.com/open-telemetry/opentelemetry-collector-contrib/processor/resourcedetectionprocessor => ../../processor/resourcedetectionprocessor
+
+replace github.com/open-telemetry/opentelemetry-collector-contrib/processor/routingprocessor => ../../processor/routingprocessor
+
+replace github.com/open-telemetry/opentelemetry-collector-contrib/processor/schemaprocessor => ../../processor/schemaprocessor
+
+replace github.com/open-telemetry/opentelemetry-collector-contrib/processor/spanprocessor => ../../processor/spanprocessor
+
+replace github.com/open-telemetry/opentelemetry-collector-contrib/processor/sumologicprocessor => ../../processor/sumologicprocessor
+
+replace github.com/open-telemetry/opentelemetry-collector-contrib/processor/tailsamplingprocessor => ../../processor/tailsamplingprocessor
+
+replace github.com/open-telemetry/opentelemetry-collector-contrib/processor/transformprocessor => ../../processor/transformprocessor
 
 replace github.com/open-telemetry/opentelemetry-collector-contrib/exporter/carbonexporter => ../../exporter/carbonexporter
 

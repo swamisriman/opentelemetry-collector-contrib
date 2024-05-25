@@ -30,7 +30,28 @@ import (
 	pprofextension "github.com/open-telemetry/opentelemetry-collector-contrib/extension/pprofextension"
 	filestorage "github.com/open-telemetry/opentelemetry-collector-contrib/extension/storage/filestorage"
 	attributesprocessor "github.com/open-telemetry/opentelemetry-collector-contrib/processor/attributesprocessor"
+	cumulativetodeltaprocessor "github.com/open-telemetry/opentelemetry-collector-contrib/processor/cumulativetodeltaprocessor"
+	deltatocumulativeprocessor "github.com/open-telemetry/opentelemetry-collector-contrib/processor/deltatocumulativeprocessor"
+	deltatorateprocessor "github.com/open-telemetry/opentelemetry-collector-contrib/processor/deltatorateprocessor"
+	filterprocessor "github.com/open-telemetry/opentelemetry-collector-contrib/processor/filterprocessor"
+	groupbyattrsprocessor "github.com/open-telemetry/opentelemetry-collector-contrib/processor/groupbyattrsprocessor"
+	groupbytraceprocessor "github.com/open-telemetry/opentelemetry-collector-contrib/processor/groupbytraceprocessor"
+	intervalprocessor "github.com/open-telemetry/opentelemetry-collector-contrib/processor/intervalprocessor"
+	k8sattributesprocessor "github.com/open-telemetry/opentelemetry-collector-contrib/processor/k8sattributesprocessor"
+	logstransformprocessor "github.com/open-telemetry/opentelemetry-collector-contrib/processor/logstransformprocessor"
+	metricsgenerationprocessor "github.com/open-telemetry/opentelemetry-collector-contrib/processor/metricsgenerationprocessor"
+	metricstransformprocessor "github.com/open-telemetry/opentelemetry-collector-contrib/processor/metricstransformprocessor"
+	probabilisticsamplerprocessor "github.com/open-telemetry/opentelemetry-collector-contrib/processor/probabilisticsamplerprocessor"
+	redactionprocessor "github.com/open-telemetry/opentelemetry-collector-contrib/processor/redactionprocessor"
+	remotetapprocessor "github.com/open-telemetry/opentelemetry-collector-contrib/processor/remotetapprocessor"
+	resourcedetectionprocessor "github.com/open-telemetry/opentelemetry-collector-contrib/processor/resourcedetectionprocessor"
 	resourceprocessor "github.com/open-telemetry/opentelemetry-collector-contrib/processor/resourceprocessor"
+	routingprocessor "github.com/open-telemetry/opentelemetry-collector-contrib/processor/routingprocessor"
+	schemaprocessor "github.com/open-telemetry/opentelemetry-collector-contrib/processor/schemaprocessor"
+	spanprocessor "github.com/open-telemetry/opentelemetry-collector-contrib/processor/spanprocessor"
+	sumologicprocessor "github.com/open-telemetry/opentelemetry-collector-contrib/processor/sumologicprocessor"
+	tailsamplingprocessor "github.com/open-telemetry/opentelemetry-collector-contrib/processor/tailsamplingprocessor"
+	transformprocessor "github.com/open-telemetry/opentelemetry-collector-contrib/processor/transformprocessor"
 	carbonreceiver "github.com/open-telemetry/opentelemetry-collector-contrib/receiver/carbonreceiver"
 	filelogreceiver "github.com/open-telemetry/opentelemetry-collector-contrib/receiver/filelogreceiver"
 	fluentforwardreceiver "github.com/open-telemetry/opentelemetry-collector-contrib/receiver/fluentforwardreceiver"
@@ -103,6 +124,27 @@ func components() (otelcol.Factories, error) {
 		memorylimiterprocessor.NewFactory(),
 		attributesprocessor.NewFactory(),
 		resourceprocessor.NewFactory(),
+		cumulativetodeltaprocessor.NewFactory(),
+		deltatocumulativeprocessor.NewFactory(),
+		deltatorateprocessor.NewFactory(),
+		filterprocessor.NewFactory(),
+		groupbyattrsprocessor.NewFactory(),
+		groupbytraceprocessor.NewFactory(),
+		intervalprocessor.NewFactory(),
+		k8sattributesprocessor.NewFactory(),
+		logstransformprocessor.NewFactory(),
+		metricsgenerationprocessor.NewFactory(),
+		metricstransformprocessor.NewFactory(),
+		probabilisticsamplerprocessor.NewFactory(),
+		redactionprocessor.NewFactory(),
+		remotetapprocessor.NewFactory(),
+		resourcedetectionprocessor.NewFactory(),
+		routingprocessor.NewFactory(),
+		schemaprocessor.NewFactory(),
+		spanprocessor.NewFactory(),
+		sumologicprocessor.NewFactory(),
+		tailsamplingprocessor.NewFactory(),
+		transformprocessor.NewFactory(),
 	)
 	if err != nil {
 		return otelcol.Factories{}, err
